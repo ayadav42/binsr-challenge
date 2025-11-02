@@ -1,0 +1,31 @@
+{
+  "name": "binsr-inspect-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "build:ts": "tsc",
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "tsx src/generate_report.ts",
+    "report": "pnpm run build && node dist/generate_report.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "@types/node": "^24.9.2",
+    "autoprefixer": "^10.4.21",
+    "playwright": "^1.56.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.16",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}
